@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import java.net.URL?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.view.ScoreboardMenuController"
+            prefWidth="1300" prefHeight="750" fx:id="root">
+    <top>
+        <VBox alignment="BOTTOM_CENTER">
+            <Label alignment="CENTER" text="Scoreboard" styleClass="title"/>
+        </VBox>
+    </top>
+
+    <center>
+        <HBox spacing="20" alignment="CENTER">
+            <ChoiceBox fx:id="choiceBox" value="highScore" styleClass="chioceBox">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="highScore"/>
+                        <String fx:value="degree"/>
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            <VBox fx:id="topTen" spacing="2" alignment="CENTER"/>
+        </HBox>
+    </center>
+
+
+    <right>
+        <VBox alignment="BOTTOM_LEFT" prefHeight="40">
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+            <Button text="Back" onMouseClicked="#back" styleClass="exit"/>
+        </VBox>
+    </right>
+
+
+    <stylesheets>
+        <URL value="@../css/style.css"/>
+    </stylesheets>
+
+</BorderPane>

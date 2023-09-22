@@ -1,0 +1,53 @@
+@font-face {
+    -fx-font-family: "Supercell";
+    src: url(../fonts/supercell.ttf);
+}
+
+.root {
+    -fx-font-family: "Supercell-Magic", "Supercell";
+}
+
+.dialog-pane{
+    -fx-border-color:gray;
+    -fx-border-width:4.0px;
+}
+
+.dialog-pane > .button-bar > .container {
+    -fx-background-color:rgb(230, 230, 230);
+}
+  
+.dialog-pane > .content.label {
+    -fx-padding: 1.8em 2em 1.8em 2em;
+    -fx-background-color:rgb(230, 230, 230);
+    -fx-text-fill:black;
+    -fx-font-size:15.0px;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color: gray;
+}
+  
+.dialog-pane:header .header-panel .label{
+    -fx-background-color: gray;
+    -fx-padding: 0.25em 5em 0.25em 5em;
+    -fx-background-radius:10px;
+    -fx-text-fill:white;
+    -fx-font-size:24.0px;
+    -fx-text-align: center;
+}
+  
+  
+/**Costumization of Buttons**/
+.dialog-pane .button{
+    -fx-background-color:rgb(0, 0, 128);
+    -fx-text-fill:white;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow( three-pass-box, rgb(0, 0, 255), 2.0, 0.0, 0.0, 0.0);
+    -fx-cursor:hand;
+}
+  
+.dialog-pane .button:hover{     
+    -fx-background-color:white;
+    -fx-text-fill:rgb(0, 0, 128);
+    -fx-font-weight:bold; 
+}

@@ -1,0 +1,106 @@
+@font-face {
+        -fx-font-family: "Supercell";
+        src: url(../fonts/supercell.ttf);
+}
+
+.root {
+        -fx-font-family: "Supercell-Magic", "Supercell";
+        -fx-font-size: large;
+        -fx-background-image: url(../images/loginPage.jpg);
+        -fx-background-size: cover;
+}
+
+.title {
+        -fx-font-size: 55;
+}
+
+.name {
+        -fx-font-size: 30;
+        -fx-text-fill: rgb(255, 255, 128);
+}
+
+.label {
+        -fx-text-fill: white;
+}
+
+.button {
+        -fx-background-radius: 8px;
+        -fx-background-color:rgb(0, 128, 255);
+        -fx-text-fill:white;
+        -fx-wrap-text: true;
+        -fx-effect: dropshadow( three-pass-box, rgb(0, 128, 255), 2.0, 0.0, 0.0, 0.0);
+        -fx-cursor:hand;
+}
+
+.button:hover {
+        -fx-background-color:white;
+        -fx-text-fill:rgb(0, 0, 128);
+}
+
+.guest {
+        -fx-background-color:orange;
+        -fx-effect: dropshadow( three-pass-box, orange, 2.0, 0.0, 0.0, 0.0);
+}
+
+.guest:hover {
+        -fx-text-fill:orange;
+}
+
+.exit {
+        -fx-background-color:red;
+        -fx-effect: dropshadow( three-pass-box, rgb(255, 0, 0), 2.0, 0.0, 0.0, 0.0);
+}
+
+.exit:hover {
+        -fx-text-fill:red;
+}
+
+.have-error-label {
+        -fx-text-fill: rgb(255, 158, 158);
+}
+
+
+.ok-label {
+        -fx-text-fill: rgb(158, 255, 158);
+}
+
+.login-label {
+        -fx-font-size: small;
+}
+
+.link-label {
+        -fx-font-size: small;
+        -fx-underline: true;
+}
+
+.link-label:hover {
+        -fx-text-fill: yellow;
+}
+
+.play {
+        -fx-outline-color: black;
+        -fx-font-size: 40;
+        -fx-background-color:rgb(255, 200, 0);
+        -fx-effect: dropshadow( three-pass-box, rgb(128, 128, 0), 2.0, 0.0, 0.0, 0.0);
+}
+
+.play:hover {
+        -fx-background-color:rgb(255, 210, 64);
+        -fx-text-fill:white;
+}
+
+.choice-box .context-menu {
+        -fx-background-color: gray
+}
+
+.choice-box .menu-item:focused {
+        -fx-background-color: rgb(89, 84, 80);
+}
+
+.choice-box .menu-item > .label {
+        -fx-text-fill: white;
+}
+.choice-box {
+  -fx-background-color: black;
+  -fx-mark-color: white;
+}

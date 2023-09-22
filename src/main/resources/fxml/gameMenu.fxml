@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.StackPane?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.view.GameMenuController"
+            prefWidth="1500" prefHeight="750">
+    <top>
+        <HBox spacing="40" alignment="CENTER" prefHeight="60">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Score:"/>
+                <Label fx:id="score"/>
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Time:"/>
+                <Label fx:id="time" text="00:00"/>
+            </HBox>
+            <Label fx:id="windLabel" text="Wind: 0.0"/>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox alignment="TOP_RIGHT" prefWidth="60">
+            <padding>
+                <Insets left="10" top="10"/>
+            </padding>
+            <ImageView fitWidth="50" fitHeight="50" onMouseClicked="#pause">
+                <Image url="@../images/pause.jpeg"/>
+            </ImageView>
+        </VBox>
+    </left>
+
+    <right>
+        <VBox prefWidth="60" spacing="40">
+            <padding>
+                <Insets top="100" left="20"/>
+            </padding>
+            <StackPane rotate="-90.0">
+                <ProgressBar fx:id="freeze" progress="0" maxWidth="100"/>
+            </StackPane>
+        </VBox>
+    </right>
+
+    <center>
+        <Pane fx:id="pane"/>
+    </center>
+
+    <bottom>
+        <HBox alignment="TOP_RIGHT" spacing="10">
+            <padding>
+                <Insets right="40" bottom="10"/>
+            </padding>
+            <Label text="Balls:"/>
+            <Label fx:id="ballsLabel"/>
+        </HBox>
+    </bottom>
+
+    <stylesheets>
+        <URL value="@../css/style.css"/>
+    </stylesheets>
+
+</BorderPane>

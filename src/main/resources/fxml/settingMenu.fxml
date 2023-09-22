@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.view.SettingMenuController"
+            prefWidth="1300" prefHeight="750" fx:id="root">
+    <top>
+        <VBox alignment="BOTTOM_CENTER" prefHeight="60">
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            <Label text="Settings" styleClass="title"/>
+        </VBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="40">
+            <HBox alignment="CENTER" spacing="20">
+                <Label text="Difficulty:"/>
+                <ChoiceBox fx:id="difficulty">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="1"/>
+                            <String fx:value="2"/>
+                            <String fx:value="3"/>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20">
+                <Label text="Balls:"/>
+                <TextField fx:id="balls" prefWidth="50"/>
+                <Label styleClass="have-error-label" fx:id="ballsError"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20">
+                <ImageView fitHeight="50" fitWidth="50" onMouseClicked="#changeColor">
+                    <Image url="@../images/color.png"/>
+                </ImageView>
+                <Button fx:id="muteButton" onMouseClicked="#mute" prefWidth="150" prefHeight="50"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="50">
+                <Label text="left"/>
+                <Label fx:id="leftLabel" prefWidth="150"/>
+                <Label text="right"/>
+                <Label fx:id="rightLabel" prefWidth="150"/>
+                <Label text="shoot"/>
+                <Label fx:id="shootLabel" prefWidth="150"/>
+                <Label text="freeze"/>
+                <Label fx:id="freezeLabel" prefWidth="150"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="50">
+                <TextField fx:id="left"/>
+                <TextField fx:id="right"/>
+                <TextField fx:id="shoot"/>
+                <TextField fx:id="freeze"/>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20">
+                <Label text="Primary Map:"/>
+                <ChoiceBox fx:id="primaryMap">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Easy"/>
+                            <String fx:value="Medium"/>
+                            <String fx:value="Hard"/>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            </HBox>
+            <Button fx:id="apply" text="Apply" onMouseClicked="#apply"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox alignment="TOP_RIGHT" prefHeight="40">
+            <padding>
+                <Insets bottom="10" right="10"/>
+            </padding>
+            <Button text="Back" onMouseClicked="#back" styleClass="exit"/>
+        </VBox>
+    </bottom>
+
+    <stylesheets>
+        <URL value="@../css/style.css"/>
+    </stylesheets>
+
+</BorderPane>
